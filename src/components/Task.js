@@ -1,9 +1,17 @@
 import React from 'react'
+import { FaTimes } from 'react-icons/fa'
 
 function Task(props) {
     return (
         <div className='task'>
-            <h3>{props.task.text}</h3>
+            <h3>
+                {props.task.text} 
+                <FaTimes 
+                    style={{color: 'red', cursor:'pointer'}} 
+                    onClick={function(){props.deleteTask(props.task.id)}} 
+                />
+            </h3>
+            <p>{props.task.day}</p>
         </div>
     )
 }

@@ -7,7 +7,7 @@ const Tasks = (props) => {
         <div>
             {props.tasks.map(
                 function(task){
-                    return (<Task key={task.id} task={task} />)
+                    return (<Task key={task.id} task={task} deleteTask={props.deleteTask} />)
                 }
             )}
         </div>
