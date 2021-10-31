@@ -1,11 +1,13 @@
 import React from 'react'
 
+import Task from './Task'
+
 const Tasks = (props) => {
     return (
         <div>
             {props.tasks.map(
                 function(task){
-                    return (<h3 key={task.id}>{task.text}</h3>)
+                    return (<Task key={task.id} task={task} />)
                 }
             )}
         </div>

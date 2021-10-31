@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Task() {
+function Task(props) {
     return (
-        <div>
-            
+        <div className='task'>
+            <h3>{props.task.text}</h3>
         </div>
     )
 }

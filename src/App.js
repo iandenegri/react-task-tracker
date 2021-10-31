@@ -12,15 +12,15 @@ function App() {
   const [tasks, setTasks] = useState(
     [
         {
-            text: 'oo',
+            text: 'Fight a war with Smurfs',
             id: 1
         },
         {
-            text: 'aa',
+            text: 'Shadow Realm Luigi',
             id:2
         },
         {
-            text: 'ee',
+            text: 'Relax',
             id:3
         },
     ]
