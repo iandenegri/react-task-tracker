@@ -1,22 +1,34 @@
 {
   "tasks": [
     {
-        "text": "Fight a war with Smurfs",
-        "id": 1,
-        "day": "March 1st 2022",
-        "reminder": true
+      "text": "Fight a war with Smurfs",
+      "id": 1,
+      "day": "March 1st 2022",
+      "reminder": true
     },
     {
-        "text": "Shadow Realm Luigi",
-        "id":2,
-        "day": "March 11th 2022",
-        "reminder": true
+      "text": "Shadow Realm Luigi",
+      "id": 2,
+      "day": "March 11th 2022",
+      "reminder": true
     },
     {
-        "text": "Relax",
-        "id":3,
-        "day": "March 21st 2022",
-        "reminder": false
+      "text": "Make peace with Smurfs",
+      "day": "April 1st 2022",
+      "reminder": false,
+      "id": 3
+    },
+    {
+      "text": "Betray the smurfs because we made peace on April Fools",
+      "day": "April 2nd 2022",
+      "reminder": true,
+      "id": 4
+    },
+    {
+      "text": "Fool the World Leaders",
+      "day": "May 5th 2022",
+      "reminder": true,
+      "id": 5
     }
-]
+  ]
 }
