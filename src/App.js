@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
+import Footer from './components/Footer';
+
 function App() {
   // State Stuff
   const [showForm, setShowForm] = useState(false);
@@ -92,6 +94,7 @@ function App() {
       <Header setShowForm={() => setShowForm(!showForm)} showForm={showForm} />
       {showForm && <AddTask addTask={addTask} /> }
       {tasks.length > 0 ? <Tasks tasks={tasks} deleteTask={deleteTask} remindTask={remindTask} /> : 'No tasks to show! Add some tasks!'}
+      <Footer />
     </div>
   );
 }

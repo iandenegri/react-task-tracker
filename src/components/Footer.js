@@ -2,9 +2,10 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div>
-            
-        </div>
+        <footer>
+            <p>Project made alongside with Traversy Media</p>
+            <a href="/about">About</a>
+        </footer>
     )
 }
 
