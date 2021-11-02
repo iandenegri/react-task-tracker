@@ -8,6 +8,7 @@ import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
 function App() {
   // State Stuff
+  const [showForm, setShowForm] = useState(false);
   const [tasks, setTasks] = useState(
     [
         {
@@ -57,8 +58,8 @@ function App() {
     // Functions should always return one element
     // With many others nested inside
     <div className="Container">
-      <Header />
-      <AddTask addTask={addTask} />
+      <Header setShowForm={() => setShowForm(!showForm)} showForm={showForm} />
+      {showForm && <AddTask addTask={addTask} /> }
       {tasks.length > 0 ? <Tasks tasks={tasks} deleteTask={deleteTask} remindTask={remindTask} /> : 'No tasks to show! Add some tasks!'}
     </div>
   );

@@ -2,14 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Button(props) {
-    const onClick = function(e){
-        console.log(e)
-        console.log('Clicked')
-        return 'Clicked'
-    }
     return (
         <button 
-            onClick={onClick}
+            onClick={props.setShowForm}
             className='btn' 
             style={{backgroundColor: props.color }}
         >{props.text}</button>
