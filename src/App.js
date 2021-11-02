@@ -1,12 +1,14 @@
 // React
 import React from 'react';
 import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route} from 'react-router-dom'
 
 // Local
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
 import Footer from './components/Footer';
+import About from './components/About';
 
 function App() {
   // State Stuff
@@ -90,12 +92,19 @@ function App() {
   return (
     // Functions should always return one element
     // With many others nested inside
-    <div className="container">
-      <Header setShowForm={() => setShowForm(!showForm)} showForm={showForm} />
-      {showForm && <AddTask addTask={addTask} /> }
-      {tasks.length > 0 ? <Tasks tasks={tasks} deleteTask={deleteTask} remindTask={remindTask} /> : 'No tasks to show! Add some tasks!'}
-      <Footer />
-    </div>
+    <Router>
+      <div className="container">
+        <Header setShowForm={() => setShowForm(!showForm)} showForm={showForm} />
+        <Route path='/' exact render={(props) => (
+          <>
+            {showForm && <AddTask addTask={addTask} /> }
+            {tasks.length > 0 ? <Tasks tasks={tasks} deleteTask={deleteTask} remindTask={remindTask} /> : 'No tasks to show! Add some tasks!'}
+          </>
+        )} />
+        <Route path="/about" component={About} />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
