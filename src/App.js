@@ -32,8 +32,10 @@ function App() {
   )
 
   // Add a task
-  const addTask = function(){
-    return
+  const addTask = function(task){
+    const id = Math.floor(Math.random() * 100000) + 1;
+    const newTask = {id, ...task};
+    setTasks([...tasks, newTask]);
   }
 
   // Delete a task
@@ -56,7 +58,7 @@ function App() {
     // With many others nested inside
     <div className="Container">
       <Header />
-      <AddTask />
+      <AddTask addTask={addTask} />
       {tasks.length > 0 ? <Tasks tasks={tasks} deleteTask={deleteTask} remindTask={remindTask} /> : 'No tasks to show! Add some tasks!'}
     </div>
   );
