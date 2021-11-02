@@ -1,6 +1,6 @@
 // React
 import React from 'react';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 // Local
 import Header from './components/Header';
@@ -9,28 +9,9 @@ import AddTask from './components/AddTask';
 function App() {
   // State Stuff
   const [showForm, setShowForm] = useState(false);
-  const [tasks, setTasks] = useState(
-    [
-        {
-            text: 'Fight a war with Smurfs',
-            id: 1,
-            day: 'March 1st 2022',
-            reminder: true
-        },
-        {
-            text: 'Shadow Realm Luigi',
-            id:2,
-            day: 'March 11th 2022',
-            reminder: true
-        },
-        {
-            text: 'Relax',
-            id:3,
-            day: 'March 21st 2022',
-            reminder: false
-        },
-    ]
-  )
+  const [tasks, setTasks] = useState([])
+
+  // Load data from fake DB
 
   // Add a task
   const addTask = function(task){

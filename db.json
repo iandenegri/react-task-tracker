@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+        "text": "Fight a war with Smurfs",
+        "id": 1,
+        "day": "March 1st 2022",
+        "reminder": true
+    },
+    {
+        "text": "Shadow Realm Luigi",
+        "id":2,
+        "day": "March 11th 2022",
+        "reminder": true
+    },
+    {
+        "text": "Relax",
+        "id":3,
+        "day": "March 21st 2022",
+        "reminder": false
+    }
+]
+}
