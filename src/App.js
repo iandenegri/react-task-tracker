@@ -5,7 +5,7 @@ import { useState } from 'react'
 // Local
 import Header from './components/Header';
 import Tasks from './components/Tasks';
-
+import AddTask from './components/AddTask';
 function App() {
   // State Stuff
   const [tasks, setTasks] = useState(
@@ -56,6 +56,7 @@ function App() {
     // With many others nested inside
     <div className="Container">
       <Header />
+      <AddTask />
       {tasks.length > 0 ? <Tasks tasks={tasks} deleteTask={deleteTask} remindTask={remindTask} /> : 'No tasks to show! Add some tasks!'}
     </div>
   );
